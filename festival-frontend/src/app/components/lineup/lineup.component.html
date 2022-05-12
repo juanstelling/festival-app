@@ -1,0 +1,52 @@
+<div class="container pt-5 pb-5">
+  <div class="row">
+    <div class="col-12 pb-2">
+      <h2 class="text-yellow text-center text-uppercase pb-3">Line up</h2>
+      <hr class="center-yellow-line">
+      <p class="text-white pb-5 pt-3 px-5 text-center">
+        Musical diversity is deeply rooted in our DNA. More than 300 artists
+        perform for 22 Stage hosts, covering all genres within the spectrum of electronic
+        music: from House, Big Room, Bass, Techno, Deep-House, Trance, Trap, and Minimal to
+        Hardstyle, Hardcore, RnB, and Hip Hop. Our handcrafted stages range from outdoor dance
+        floors to massive tents filled with LED screens, laser shows, and the world's most advanced
+        sound systems.
+      </p>
+    </div>
+    <!-- Mobile version -->
+    <div class="d-block d-md-none d-lg-none d-xl-none">
+      <div class="col-12 pb-2" *ngFor="let dj of djs">
+        <div class="custom-card bg-white py-2">
+          <img class="card-img-top pt-1"
+            src="https://images.pexels.com/photos/1649691/pexels-photo-1649691.jpeg?cs=srgb&dl=pexels-davide-de-giovanni-1649691.jpg&fm=jpg"
+            alt="Card image cap">
+          <div class="card-body pt-2 pb-2">
+            <h3 class="card-title text-uppercase pt-2 ">{{dj.djName}}</h3>
+            <hr class="middle-yellow-line">
+            <h5 class="card-text text-uppercase">{{dj.djGenre}}</h5>
+            <h6 class="card-text text-uppercase">{{dj.djBio}}</h6>
+            <h6 class="card-text pb-2 text-uppercase"><a [routerLink]="['/djs/', dj.djId]"
+                class="lineup-link text-uppercase">Read more</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop/tablet version -->
+    <div class="d-none d-md-block d-lg-block d-xl-block">
+      <div class="col-12 pb-2" *ngFor="let dj of djs">
+        <div class="custom-card bg-white py-2">
+          <img class="card-img-top col-6 pt-1 pe-4"
+            src="https://images.pexels.com/photos/1649691/pexels-photo-1649691.jpeg?cs=srgb&dl=pexels-davide-de-giovanni-1649691.jpg&fm=jpg"
+            alt="Card image cap">
+          <div class="card-body col-6 float-end pt-2 ps-2 pb-2">
+            <h3 class="card-title text-uppercase pt-2 ">{{dj.djName}}</h3>
+            <hr class="middle-yellow-line">
+            <h5 class="card-text text-uppercase">{{dj.djGenre}}</h5>
+            <h6 class="card-text text-uppercase">{{dj.djBio}}</h6>
+            <h6 class="card-text pb-2 text-uppercase"><a [routerLink]="['/djs/', dj.djId]"
+                class="lineup-link text-uppercase">Read more</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

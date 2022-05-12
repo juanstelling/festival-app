@@ -1,0 +1,39 @@
+<div class="container pt-5 pb-5">
+  <div class="row px-3 pb-2">
+    <a class="text-yellow" [routerLink]="['']">Go to Home</a>
+  </div>
+  <div class="row">
+    <!-- Mobile/tablet version -->
+    <div class="d-block d-md-none d-lg-none d-xl-none">
+      <div class="col-12 pb-2">
+        <div class="custom-card bg-white py-2">
+          <img class="card-img-top pt-1"
+            src="https://images.pexels.com/photos/1649691/pexels-photo-1649691.jpeg?cs=srgb&dl=pexels-davide-de-giovanni-1649691.jpg&fm=jpg"
+            alt="Card image cap">
+          <div class="card-body pt-2 pb-2">
+            <h3 class="card-title text-uppercase pt-2 ">{{id.djName}}</h3>
+            <hr class="middle-yellow-line">
+            <h6 class="card-text text-uppercase">Genre: {{id.djGenre}}</h6>
+            <h6 class="card-text text-uppercase">Bio: {{id.djBio}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop/tablet version -->
+    <div class="d-none d-md-block d-lg-block d-xl-block">
+      <div class="col-12 pb-2">
+        <div class="custom-card bg-white py-2">
+          <img class="card-img-top col-6 pt-1 pe-4"
+            src="https://images.pexels.com/photos/1649691/pexels-photo-1649691.jpeg?cs=srgb&dl=pexels-davide-de-giovanni-1649691.jpg&fm=jpg"
+            alt="Card image cap">
+          <div class="card-body col-6 float-end pt-2 ps-2 pb-2">
+            <h3 class="card-title text-uppercase pt-2 ">{{id.djName}}</h3>
+            <hr class="middle-yellow-line">
+            <h6 class="card-text text-uppercase">Genre: {{id.djGenre}}</h6>
+            <h6 class="card-text text-uppercase">Bio: {{id.djBio}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

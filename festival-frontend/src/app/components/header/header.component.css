@@ -1,0 +1,29 @@
+.logo {
+  color: #fff;
+  font-size: 35px;
+}
+
+.logo:hover {
+  color: #fddf3f;
+}
+
+a {
+  font-size: 25px;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand {
+  padding: 10px 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fddf3f;
+}

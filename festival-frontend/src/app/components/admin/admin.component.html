@@ -1,0 +1,151 @@
+<!-- Mobile/tablet version -->
+<div class="d-block d-md-block d-lg-none d-xl-none">
+  <!--DJS-->
+  <div class="container py-3 pt-5">
+    <div class="row">
+      <div class="col">
+        <h3 class="text-uppercase text-yellow">DJS</h3>
+        <a class="text-yellow float-right pb-1" [routerLink]="['/create-dj']">
+          <p>Create new dj</p>
+        </a>
+      </div>
+    </div>
+    <table class="table  bg-white">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let dj of djs">
+        <tr>
+          <td>{{dj.djId}}</td>
+          <td><a class="todetail" [routerLink]="['/djs/', dj.djId]">{{dj.djName}}</a></td>
+          <td>
+            <a class="btn btn-outline-dark" [routerLink]="['/update-dj/', dj.djId]">Update</a>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="deleteDjId(dj)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- SETS -->
+  <div class="container py-3 pb-5">
+    <div class="row">
+      <div class="col">
+        <h3 class="text-uppercase text-yellow">Sets</h3>
+        <a class="text-yellow float-right pb-1" [routerLink]="['/create-set']">
+          <p>Create new session</p>
+        </a>
+      </div>
+    </div>
+    <table class="table bg-white">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let set of sets">
+        <tr>
+          <td>{{set.setId}}</td>
+          <td><a class="todetail" [routerLink]="['/sets/', set.setId]">{{set.setName}}</a></td>
+          <td>
+            <a class="btn btn-outline-dark" [routerLink]="['/update-set/', set.setId]">Update</a>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="deleteSetId(set)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Desktop version -->
+<div class="d-none d-md-none d-lg-block d-xl-block">
+  <!--DJS-->
+  <div class="container py-3 pt-5">
+    <div class="row">
+      <div class="col">
+        <h3 class="text-uppercase text-yellow">DJS</h3>
+        <a class="text-yellow float-right pb-1" [routerLink]="['/create-dj']">
+          <p>Create new dj</p>
+        </a>
+      </div>
+    </div>
+    <table class="table bg-white">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Bio</th>
+          <th scope="col">Genre</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let dj of djs">
+        <tr>
+          <td>{{dj.djId}}</td>
+          <td><a class="todetail" [routerLink]="['/djs/', dj.djId]">{{dj.djName}}</a></td>
+          <td>{{dj.djBio}}</td>
+          <td>{{dj.djGenre}}</td>
+          <td>
+            <a class="btn btn-outline-dark" [routerLink]="['/update-dj/', dj.djId]">Update</a>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="deleteDjId(dj)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- SETS -->
+  <div class="container py-3 pb-5">
+    <div class="row">
+      <div class="col">
+        <h3 class="text-uppercase text-yellow">Sets</h3>
+        <a class="text-yellow float-right pb-1" [routerLink]="['/create-set']">
+          <p>Create new session</p>
+        </a>
+      </div>
+    </div>
+    <table class="table bg-white">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Day</th>
+          <th scope="col">Stage</th>
+          <th scope="col">Begin time</th>
+          <th scope="col">Duration</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let set of sets">
+        <tr>
+          <td>{{set.setId}}</td>
+          <td><a class="todetail" [routerLink]="['/sets/', set.setId]">{{set.setName}}</a></td>
+          <td>{{set.setDay}}</td>
+          <td>{{set.setStage}}</td>
+          <td>{{set.setBeginTime}}</td>
+          <td>{{set.setDuration}}</td>
+          <td>
+            <a class="btn btn-outline-dark" [routerLink]="['/update-set/', set.setId]">Update</a>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-dark" (click)="deleteSetId(set)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+
+  festival-frontend:
+    build:
+      context: ./festival-frontend
+      dockerfile: ./Dockerfile
+    environment:
+      - "FESTIVAL_SERVICE_URL= http://festival-service:8090"
+    depends_on:
+      - festival-service
+    ports:
+     - "4200:80"
+    container_name: festival-frontend
+
+
+  festival-service:
+    build:
+      context: ./festival-service
+      dockerfile: ./Dockerfile
+    ports:
+      - "127.0.0.1:8090:8090"
+    container_name: festival-service
+    restart: on-failure

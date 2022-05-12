@@ -1,0 +1,162 @@
+html {
+    min-width: 100%;
+    min-height: 100%;
+    /* margin: 0px;
+    padding: 0px; */
+    /* overflow-x: hidden; */
+    /* min-height: 100%; */
+    position: relative;
+}
+
+body {
+    font-family: 'Oswald';
+    background-color: #202020;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #000;
+}
+
+.text-yellow {
+    color: #fddf3f;
+}
+
+.center-yellow-line {
+    background-color: #fddf3f;
+    color: #fddf3f;
+    border: solid 1.5px #fddf3f;
+    opacity: 1;
+    width: 80%;
+    margin: auto;
+}
+
+/*------------------------------------- background colours */
+.bg-black {
+    background-color: #000 !important;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-image {
+    background-image: url('https://images.pexels.com/photos/949592/pexels-photo-949592.jpeg?cs=srgb&dl=pexels-rovenimagescom-949592.jpg&fm=jpg');
+    height: 500px;
+}
+
+.bg-yellow {
+    background-color: #fddf3f;
+}
+
+/*------------------------------------- Images */
+
+.img-fluid {
+    max-width: auto;
+    height: auto;
+}
+
+/*------------------------------------- navbar background */
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png');
+}
+
+/*------------------------------------- cards */
+
+.card {
+    padding: 20px;
+    height: 100%;
+}
+
+.custom-card {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 15px solid #202020;
+    border-radius: 5%;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card-img,
+.card-img-bottom {
+    width: 100%;
+}
+
+.card-img-top {
+    width: 50%;
+}
+
+/*------------------------------------- Forms */
+
+.submit-form {
+    width: 80%;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #fddf3f;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 2px solid #45ea4f;
+    /* green */
+    border-bottom: 2px solid #45ea4f;
+
+}
+
+.ng-invalid:not(form) {
+    border-left: 2px solid #ff0500;
+    /* red */
+    border-bottom: 2px solid #ff0500;
+}
+
+.alert-danger {
+    width: 100%;
+    border-radius: 5px;
+    border-color: #fddf3f;
+    padding: 5px;
+    margin: 0;
+    color: #000;
+    background-color: #fddf3f;
+
+}
+
+/*------------------------------------- Buttons */
+
+.btn-warning {
+    margin: 5px;
+    padding: 5px;
+}
+
+/*------------------------------------- Media screens tablet */
+@media screen and (max-width: 767px) {
+    .card-img-top {
+        width: 100%;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-text {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,19 @@
+.btn-delete {
+  color: black;
+}
+
+.btn-delete:hover {
+  background-color: red;
+}
+
+.todetail:hover {
+  color: #676565;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.table {
+  border-radius: 5px;
+}

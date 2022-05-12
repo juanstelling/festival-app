@@ -1,0 +1,16 @@
+.header-text {
+    background-color: black;
+    opacity: .85;
+}
+
+.card-yellow {
+    background-color: #fddf3f;
+}
+
+.card-white {
+    background-color: #fff;
+}
+
+a:hover {
+    color: #000;
+}
